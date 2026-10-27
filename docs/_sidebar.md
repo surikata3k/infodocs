@@ -20,6 +20,9 @@
   * [Remote Access with PowerShell](windows_remote_access_powershell.md)
   * [SSH Server and Client](windows_ssh.md)
   * [WSL (Windows Subsystem for Linux)](windows_wsl.md)
+ 
+* **Apps Web**
+  * [Moodle](moodle.md)
 
 * **Databases**
   * [Oracle Tips](oracle_tips.md)
