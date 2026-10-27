@@ -1,21 +1,3 @@
-# Config ssh in windows
-
-## Config
-Config file in .ssh folder
-```
-Host files
-    HostName 192.168.1.2
-    User user
-    Port 22
-    IdentityFile ~/.ssh/id_ed25519
-
-```
-
-
-## Python script to copy public key to server
-Get script [copyPubKey.py](scripts/copyPubKey.py)
-
-``` python
 import os
 import subprocess
 import glob
@@ -61,4 +43,3 @@ try:
 except subprocess.CalledProcessError as e:
     print(f"Error al ejecutar el comando SSH: {e}")
 
-```
