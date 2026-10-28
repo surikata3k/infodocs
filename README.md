@@ -7,10 +7,21 @@ Site: <https://surikata3k.github.io/it-hub/> (built with [Zensical](https://zens
 ## Edit locally
 
 ```bash
-pip install zensical
-zensical serve      # preview at http://localhost:8000
-python -m zensical serve
+python -m venv .venv
+.venv\Scripts\Activate.ps1        # Linux/macOS: source .venv/bin/activate
+pip install -r requirements.txt
+zensical serve                    # preview at http://localhost:8000
 ```
 
-Pages live in `docs/`, one folder per section. Add a new page to the `nav` list in `zensical.toml`.
-Every push to `main` publishes the site through `.github/workflows/docs.yml`.
+If `zensical` is not found, run it through Python: `python -m zensical serve`.
+
+## Add content
+
+Pages live in `docs/`, one folder per section. The navigation is generated automatically
+from the folder structure, so a new `.md` file appears in the menu without touching
+`zensical.toml`.
+
+## Publish
+
+Every push to `main` builds and publishes the site through `.github/workflows/docs.yml`.
+The Zensical version is pinned in `requirements.txt`; update it there when upgrading.

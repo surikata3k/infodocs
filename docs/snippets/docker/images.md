@@ -25,7 +25,7 @@ Both methods build the same small Flask app from these two files:
 ## From a Dockerfile
 
 ```dockerfile title="Dockerfile"
-FROM python:alpine3.17
+FROM python:3.13-alpine
 WORKDIR /app
 COPY . /app
 RUN pip install -r requirements.txt
@@ -43,7 +43,7 @@ docker run -d -p 9998:9999 hello-python:1.0
 1.  Create a container from the base image:
 
     ```bash
-    docker run -itd --name python-base python:alpine3.17
+    docker run -itd --name python-base python:3.13-alpine
     ```
 
 2.  Copy the files into the container:

@@ -2,14 +2,14 @@
 
 ## Static IP with Netplan
 
-```yaml title="/etc/netplan/netplanl-static-ip.yaml"
+```yaml title="/etc/netplan/01-static-ip.yaml"
 network:
   version: 2
   renderer: networkd
   ethernets:
     eth0:  # (1)!
-      dhcp4: no
-      dhcp6: no
+      dhcp4: false
+      dhcp6: false
       addresses:
         - 10.135.5.134/8
       routes:
@@ -22,7 +22,15 @@ network:
           - 8.8.4.4
 ```
 
-1.  Replace `eth0` with your actual network interface name.
+1.  Replace `eth0` with your actual network interface name (`ip a` lists them).
+
+Restrict the file permissions and apply the configuration:
+
+```bash
+sudo chmod 600 /etc/netplan/01-static-ip.yaml
+sudo netplan try      # rolls back automatically if you lose the connection
+sudo netplan apply
+```
 
 ## DNS
 
@@ -34,7 +42,6 @@ nmcli device show
 
 ```bash
 resolvectl status
-systemd-resolve --status
 ```
 
 DNS servers used by systemd-resolved:
@@ -54,8 +61,8 @@ Resolution priority (files, DNS…) is set in:
 1.  Create the configuration file:
 
     ```bash
-    mkdir /etc/systemd/resolved.conf.d/
-    vi /etc/systemd/resolved.conf.d/dns_servers.conf
+    sudo mkdir -p /etc/systemd/resolved.conf.d/
+    sudo nano /etc/systemd/resolved.conf.d/dns_servers.conf
     ```
 
 2.  Add the content:
@@ -68,7 +75,7 @@ Resolution priority (files, DNS…) is set in:
 3.  Restart the service:
 
     ```bash
-    systemctl restart systemd-resolved
+    sudo systemctl restart systemd-resolved
     ```
 
 ### Resolve a domain

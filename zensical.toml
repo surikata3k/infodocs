@@ -1,8 +1,8 @@
 [project]
 site_url = "https://surikata3k.github.io/it-hub/"
 site_name = "IT-Hub"
-# site_description = "Your project description"
-# site_author = "Your name"
+site_description = "IT notes, snippets, cheat sheets and tutorials: Linux, Windows, Docker, databases and more."
+site_author = "Surikata3k"
 
 copyright = "Copyright &copy; 2026 Surikata3k"
 
@@ -15,7 +15,7 @@ edit_uri = "edit/main/docs/"
 #   { "Markdown in 5min" = "markdown.md" },
 # ]
 
-# extra_css = ["stylesheets/extra.css"]
+extra_css = ["stylesheets/extra.css"]
 # extra_javascript = ["javascripts/extra.js"]
 
 [project.theme]
@@ -26,7 +26,7 @@ language = "en"
 features = [
   "announce.dismiss",
   "content.action.edit",
-   "content.action.view",
+  "content.action.view",
   "content.code.annotate",
   "content.code.copy",
   "content.code.select",
@@ -49,7 +49,7 @@ features = [
   "navigation.tracking",
   "search.highlight",
   # "toc.follow",
-   "toc.integrate",
+  "toc.integrate",
 ]
 
 # logo = "assets/logo.png"
@@ -78,9 +78,9 @@ scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
 
-# [[project.extra.social]]
-# icon = "fontawesome/brands/github"
-# link = "https://github.com/user/repo"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/surikata3k/it-hub"
 
 # [[project.extra.social]]
 # icon = "fontawesome/brands/mastodon"

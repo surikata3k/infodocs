@@ -9,8 +9,8 @@ FROM node:lts-alpine
 WORKDIR /app
 COPY . .
 RUN yarn install --production
-CMD ["node", "src/index.js"]
 EXPOSE 3000
+CMD ["node", "src/index.js"]
 ```
 
 ## Build and run
@@ -54,6 +54,10 @@ docker run -dp 0.0.0.0:3000:3000 YOUR-USER-NAME/getting-started
 ## Docker Compose
 
 ```bash
-docker-compose up
-docker-compose -f config_file.yml up
+docker compose up -d                      # uses compose.yaml in the current folder
+docker compose -f config_file.yml up -d
+docker compose down                       # stop and remove the containers
 ```
+
+!!! note
+    `docker-compose` (with a hyphen) is the old v1 tool and is no longer maintained. Use `docker compose`.

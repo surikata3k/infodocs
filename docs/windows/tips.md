@@ -1,36 +1,47 @@
 # Windows tips
 
-## Check disk
+## Benchmark a disk
+
 ```powershell
 winsat disk -drive F
 ```
 
-## Edit network
+## Open network connections
+
 ```powershell
 ncpa.cpl
 ```
 
-## View folder of current wallpaper
+## Find the current wallpaper
+
+Cached copy of the wallpaper (paste it in the File Explorer address bar):
+
 ```text
 %AppData%\Microsoft\Windows\Themes\CachedFiles
 ```
 
-## Right menu with all options
+## Classic right-click menu (Windows 11)
+
+Shows all options without clicking "Show more options". Restart Explorer or sign out to apply:
+
 ```powershell
 reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 ```
 
-## Install skipping Microsoft user
-Press ++shift+f10++ and type one of these:
+## Install without a Microsoft account
+
+During setup, press ++shift+f10++ to open a command prompt and type one of these:
 
 ```text
 start ms-cxh:localonly
 ```
+
 ```text
 OOBE\BYPASSNRO
 ```
 
-## Mouse: disable wake up from sleep
+## Stop the mouse from waking the PC
+
 1. Find the exact name of your mouse by running this command:
 
     ```bat

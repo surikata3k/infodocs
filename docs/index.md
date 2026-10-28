@@ -16,6 +16,6 @@ These notes are a work in progress and grow as I find new things worth keeping.
 
 ## About Surikata3k
 
-IT-Hub is part of [Surikata3k](https://surikata3k.github.io), my personal space for IT projects and resources. From the main site you can reach:
+IT-Hub is part of [Surikata3k](https://surikata3k.github.io), my personal space for IT projects and resources.
 
 Found a mistake or have a suggestion? Open an issue on [GitHub](https://github.com/surikata3k/it-hub/issues).

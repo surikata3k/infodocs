@@ -5,7 +5,8 @@
 - [WinDirStat](https://windirstat.net/) - Windows directory statistics
 - [FileBrowser Quantum](https://filebrowserquantum.com/en/) - Web file manager
 - [Excalidraw](https://excalidraw.com/) - Hand-drawn style diagrams
-- [Mailtrap](https://mailtrap.io/) - Sendmail for testing
+- [Mailpit](https://mailpit.axllent.org/) - Self-hosted SMTP server for testing (see [Mailpit](snippets/mailpit.md))
+- [Mailtrap](https://mailtrap.io/) - Online email testing service
 
 ## Cheat sheets
 
@@ -14,9 +15,9 @@
 
 ## Courses
 
-- [Curso Docker IES Gonzalo Nazareno](https://iesgn.github.io/curso_docker_2021/)
+- [Docker course, IES Gonzalo Nazareno (Spanish)](https://iesgn.github.io/curso_docker_2021/)
 
 ## Documentation tools
 
 - [Zensical](https://zensical.org/) - Generator of this site
-- [Docsify](https://docsify.js.org/)
+- [Docsify](https://docsify.js.org/) - Documentation site generator

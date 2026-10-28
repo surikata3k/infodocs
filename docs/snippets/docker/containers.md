@@ -3,7 +3,7 @@
 ## Jenkins
 
 ```bash
-docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk17
+docker run -d --name jenkins -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk21
 ```
 
 ## Portainer
@@ -20,6 +20,8 @@ docker run -i -t --rm ubuntu:latest /bin/bash
 
 ## MeTube
 
+Downloads go to the current folder:
+
 ```bash
-docker run -d -p 8081:8081 -v .:/downloads ghcr.io/alexta69/metube
+docker run -d --name metube -p 8081:8081 -v "$(pwd)":/downloads ghcr.io/alexta69/metube
 ```

@@ -15,7 +15,7 @@ Enable-PSRemoting -Force
 === "With a domain (Active Directory)"
 
     ```powershell
-    Enter-PSSession -ComputerName "NomDelServidor" -Credential (Get-Credential)
+    Enter-PSSession -ComputerName "SERVER_NAME" -Credential (Get-Credential)
     ```
 
     !!! note
@@ -28,13 +28,21 @@ Enable-PSRemoting -Force
     1.  On the client, open PowerShell as **Administrator** and run:
 
         ```powershell
-        Set-Item WSMan:\localhost\Client\TrustedHosts -Value "IP_DEL_SERVIDOR" -Concatenate -Force
+        Set-Item WSMan:\localhost\Client\TrustedHosts -Value "SERVER_IP" -Concatenate -Force
         ```
 
-        *(Optional)* Use `"*"` instead of the IP to trust any computer on the local network.
+        *(Optional)* Use `"*"` instead of the IP to trust any computer. Only do this in a lab.
 
     2.  Connect using the server IP:
 
         ```powershell
-        Enter-PSSession -ComputerName "IP_DEL_SERVIDOR" -Credential "IP_DEL_SERVIDOR\Administrador"
+        Enter-PSSession -ComputerName "SERVER_IP" -Credential "SERVER_IP\Administrator"
         ```
+
+        On a Spanish Windows Server the account is `Administrador`.
+
+## 3. Leave the session
+
+```powershell
+Exit-PSSession
+```
