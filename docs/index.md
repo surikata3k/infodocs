@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # IT-Hub
 
 A personal collection of IT notes I keep while working and teaching: commands I use often, configuration examples, short tutorials and cheat sheets. Everything is written to be copied and used directly, without the noise of long articles.

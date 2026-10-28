@@ -27,5 +27,4 @@ GRANT CREATE SESSION TO user_name;
 ALTER USER usuari IDENTIFIED BY currentPassword REPLACE newPassword;
 ```
 
-!!! tip
-    To start an Oracle server quickly, see [Database containers](containers.md).
+

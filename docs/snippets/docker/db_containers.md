@@ -19,8 +19,6 @@ Each container keeps its data in a named volume.
     docker run --name oracle -p 1521:1521 -e ORACLE_PWD=123456 -v oracledb:/opt/oracle/oradata container-registry.oracle.com/database/free:latest
     ```
 
-    See also [Oracle tips](oracle.md).
-
 === "PostgreSQL"
 
     ```bash

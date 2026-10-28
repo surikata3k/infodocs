@@ -9,6 +9,7 @@ Site: <https://surikata3k.github.io/it-hub/> (built with [Zensical](https://zens
 ```bash
 pip install zensical
 zensical serve      # preview at http://localhost:8000
+python -m zensical serve
 ```
 
 Pages live in `docs/`, one folder per section. Add a new page to the `nav` list in `zensical.toml`.
