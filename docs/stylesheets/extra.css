@@ -11,3 +11,9 @@
     font-size: 1.6em;
     vertical-align: -0.2em;
 }
+
+/* Oculta la tabla de contenidos (sidebar derecho) en todas las páginas */
+.md-sidebar--secondary {
+  display: none;
+}
+
