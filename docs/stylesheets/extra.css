@@ -13,7 +13,6 @@
 }
 
 /* Oculta la tabla de contenidos (sidebar derecho) en todas las páginas */
-.md-sidebar--secondary {
-  display: none;
+.md-sidebar--secondary:not([hidden]) {
+  display: none !important;
 }
-
